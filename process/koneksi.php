@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "ibnu_sispak";
+$dbname = "spk_karyawan_wp";
 
 // Create connection
 $connect = new mysqli($servername, $username, $password, $dbname);

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 28, 2024 at 12:05 PM
+-- Generation Time: Nov 04, 2024 at 08:56 PM
 -- Server version: 8.0.30
--- PHP Version: 8.3.9
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ibnu_sispak`
+-- Database: `spk_karyawan_wp`
 --
 
 -- --------------------------------------------------------
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `absensi` (
-  `absen_id` varchar(40) CHARACTER SET utf8mb4  NOT NULL,
+  `absen_id` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `sd` decimal(3,1) DEFAULT NULL,
   `pc` decimal(3,1) DEFAULT NULL,
   `dt` decimal(3,1) DEFAULT NULL,
@@ -36,7 +36,7 @@ CREATE TABLE `absensi` (
   `s` decimal(3,1) DEFAULT NULL,
   `a` decimal(4,1) DEFAULT NULL,
   `total_bobot` decimal(6,1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `absensi`
@@ -65,7 +65,7 @@ CREATE TABLE `karyawan` (
   `i` int NOT NULL DEFAULT '0',
   `s` int NOT NULL DEFAULT '0',
   `a` int NOT NULL DEFAULT '0',
-  `point_absen` varchar(10) CHARACTER SET utf8mb4  NOT NULL DEFAULT '0',
+  `point_absen` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT '0',
   `kj` int NOT NULL DEFAULT '0',
   `ks` int NOT NULL DEFAULT '0',
   `tj` int NOT NULL DEFAULT '0',
@@ -73,7 +73,7 @@ CREATE TABLE `karyawan` (
   `ktlt` int NOT NULL DEFAULT '0',
   `vector_s` decimal(8,2) NOT NULL,
   `vector_v` decimal(3,2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `karyawan`
@@ -96,7 +96,7 @@ CREATE TABLE `kriteria` (
   `tj` int NOT NULL,
   `siplin` int NOT NULL,
   `ktlt` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `kriteria`
@@ -117,7 +117,7 @@ CREATE TABLE `pengguna` (
   `username` varchar(100) DEFAULT NULL,
   `password` varchar(100) DEFAULT NULL,
   `profile` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `pengguna`
